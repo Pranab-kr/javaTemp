@@ -33,7 +33,7 @@ public class Main8 {
       System.out.println("Target was not found");
 
     }
-    sc.close();
+    sc.close(); // close the scanner
   }
 
 }
