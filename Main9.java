@@ -21,19 +21,19 @@ class InvalidExternalMarksException extends Exception {
 public class Main9 {
 
   static void InternalMarks(int marks) throws InvalidInternalMarksException {
-if (marks > 30 || marks < 0 ) {
-  throw new InvalidExternalMarksException("Invalid Internal Marks");
+    if (marks > 30 || marks < 0) {
+      throw new InvalidInternalMarksException("Invalid Internal Marks");
 
-}
+    }
   }
-
 
   static void ExternalMarks(int marks) throws InvalidExternalMarksException {
-if (marks > 70 || marks < 0 ) {
-  throw new InvalidExternalMarksException("Invalid External Marks");
+    if (marks > 70 || marks < 0) {
+      throw new InvalidExternalMarksException("Invalid External Marks");
 
-}
+    }
   }
+
   public static void main(String[] args) {
 
     Scanner sc = new Scanner(System.in);
@@ -46,14 +46,15 @@ if (marks > 70 || marks < 0 ) {
       int external = sc.nextInt();
       ExternalMarks(external);
 
+      System.out.println("Marks entered successfully");
+
     } catch (InvalidInternalMarksException e) {
-      System.out.println(e.getMessage());
-    } catch( InvalidExternalMarksException e)
-    {
-      System.out.println(e.getMessage());
+      System.out.println("Internal: " + e.getMessage());
+    } catch (InvalidExternalMarksException e) {
+      System.out.println("External: " + e.getMessage());
     }
 
+    sc.close();
   }
-  // sc.close();
 
 }
