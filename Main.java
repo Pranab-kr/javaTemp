@@ -9,11 +9,11 @@ abstract class vehicle {
   String regino;
 
   public vehicle(double fuel, String regino) {
-   this.fuel = fuel;
-   this.regino = regino;
+    this.fuel = fuel;
+    this.regino = regino;
   }
   public String toString() {
-      return "Vechile type: " + this.getClass().getSimpleName() + " Regi no: " + regino + "Fuel capacity: " + fuel + "Litters" ;
+    return "Vechile type: " + this.getClass().getSimpleName() + " Regi no: " + regino + "Fuel capacity: " + fuel + "Litters" ;
   }
 
 }
@@ -46,10 +46,10 @@ public class Main {
 
     Motorcycle M1 = new Motorcycle(40, "Dagsdh1o2");
 
-   System.out.println(c1.toString());
+    System.out.println(c1.toString());
 
     System.out.println(T1.toString());
 
     System.out.println(M1.toString());
-   }
+  }
 }
